@@ -1,0 +1,75 @@
+<div class="main-container">
+
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <h1>Uñas que cuentan tu historia</h1>
+      <p>Manicura profesional con el estilo que mereces. ¡Encuéntranos en ruta o en nuestro salón!</p>
+      <button (click)="scrollTo('contacto')" class="btn-primary">Reservar Cita</button>
+    </div>
+  </section>
+
+  <section id="servicios" class="services-section">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="icon">💅</span>
+        <h3>Manicura Rusa</h3>
+        <p>Limpieza profunda para un acabado perfecto y duradero.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">✨</span>
+        <h3>Kapping Gel</h3>
+        <p>Protección y brillo natural para tus uñas naturales.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">💎</span>
+        <h3>Acrílicas</h3>
+        <p>Extensión y diseño personalizado con la mejor calidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="gallery-section">
+    <h2>Galería de Diseños</h2>
+    <div class="gallery-placeholder">
+      <div class="photo-card">Foto 1</div>
+      <div class="photo-card">Foto 2</div>
+      <div class="photo-card">Foto 3</div>
+    </div>
+  </section>
+
+  <section id="ubicacion" class="location-section">
+    <h2>Ubicación</h2>
+    <div class="location-card">
+      <p>📍 Estamos cerca de ti.</p>
+      <p>Sigue la <strong>Minivan de Nails & Tech</strong> para promociones exclusivas en ruta.</p>
+    <div class="map-sim">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d411.1299449292994!2d-76.99142698806746!3d-11.942845325699587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssebastian%20pagador!5e0!3m2!1ses!2spe!4v1767598652785!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+    </div>
+  </section>
+
+ <section id="contacto" class="contact-section">
+  <h2>Reserva tu Cita</h2>
+  
+  <form class="booking-form">
+    <input type="text" name="nombre" [(ngModel)]="datos.nombre" placeholder="Tu nombre">
+    
+    <input type="tel" name="whatsapp" [(ngModel)]="datos.whatsapp" placeholder="Tu WhatsApp">
+    
+    <select name="servicio" [(ngModel)]="datos.servicio">
+      <option value="" disabled selected>Selecciona un servicio</option>
+      <option value="Manicura Rusa">Manicura Rusa</option>
+      <option value="Kapping Gel">Kapping Gel</option>
+      <option value="Acrílicas">Acrílicas</option>
+    </select>
+
+    <button type="button" (click)="enviarWhatsApp()" class="btn-wsp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WSP" class="wsp-icon">
+      Enviar a WhatsApp
+    </button>
+  </form>
+</section>
+
+</div>
+
+

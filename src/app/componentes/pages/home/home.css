@@ -1,0 +1,118 @@
+.main-container {
+  padding-top: 70px; /* Para que el navbar no tape el inicio */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #e91e63;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(233, 30, 99, 0.1), rgba(255, 255, 255, 1)), 
+              url('https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop');
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid de Servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fdfdfd;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.service-card:hover { transform: translateY(-10px); }
+
+/* Formulario */
+.booking-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input, .booking-form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.btn-primary, .btn-submit {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-wsp {
+  background-color: #25d366; /* Verde WhatsApp oficial */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacio entre icono y texto */
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn-wsp:hover {
+  transform: scale(1.05);
+  background-color: #1ebe57;
+}
+
+.wsp-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Si prefieres mantener el rosa del salón, cambia el background-color del .btn-wsp a #e91e63 */
+
+@media (max-width: 600px) {
+  .booking-form {
+    width: 100%;
+    max-width: 100%; /* Asegura que no se salga de la pantalla */
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .btn-wsp {
+    width: 100%; /* Que el botón ocupe todo el ancho en móvil para que sea fácil tocarlo */
+    font-size: 14px;
+    padding: 15px;
+  }
+  
+  .contact-section {
+    padding: 40px 15px; /* Menos espacio arriba/abajo para que quepa todo */
+  }
+}
